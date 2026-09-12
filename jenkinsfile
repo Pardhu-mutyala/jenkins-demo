@@ -5,7 +5,9 @@ pipeline {
     stages {
         stage('Example Build') {
             steps {
-                echo 'Hello World'
+                sh ---
+                    echo 'Hello World'
+                ---
             }
         }
         stage('Example Deploy') {
@@ -16,6 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying'
             }
+
         }
     }
 }
