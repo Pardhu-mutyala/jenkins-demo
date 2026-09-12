@@ -5,13 +5,12 @@ pipeline {
     stages {
         stage('Example Build') {
             steps {
-                script{
-                sh ---
-                    echo 'Hello World'
-                ---
+                script {
+                    sh '''
+                        echo 'Hello World'
+                    '''
                 }
             }
-          }
         }
         stage('Example Deploy') {
             when {
@@ -21,7 +20,6 @@ pipeline {
             steps {
                 echo 'Deploying'
             }
-
         }
     }
 }
